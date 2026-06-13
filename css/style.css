@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #111827;
+}
+
+.add-subreddit {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #f97316;
+    color: white;
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.lane {
+    min-width: 380px;
+    max-width: 380px;
+    height: 80vh;
+    background: #1e293b;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.lane-header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #334155;
+}
+
+.posts {
+    overflow-y: auto;
+    padding: 15px;
+    flex: 1;
+}
+
+.post {
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.post h4 {
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+.post-stats {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.loading {
+    text-align: center;
+    padding: 30px;
+}
+
+.error {
+    color: #ef4444;
+    padding: 20px;
+    text-align: center;
+}
+
+.remove-btn {
+    background: #ef4444;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .lane {
+        min-width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
